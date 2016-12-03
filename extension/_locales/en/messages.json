@@ -58,10 +58,42 @@
 	"local_only": {"message": "Local only"},
 	"none": {"message": "None"},
 	"extras": {"message": "Extras"},
-	"minute": {"message": "minute"},
-	"minutes": {"message": "minutes"},
-	"hour": {"message": "hour"},
-	"hours": {"message": "hours"},
+	"minute": {
+		"message": "$min$ minute",
+		"placeholders": {
+			"min": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"minutes": {
+		"message": "$mins$ minutes",
+		"placeholders": {
+			"mins": {
+				"content": "$1",
+				"example": "24"
+			}
+		}
+	},
+	"hour": {
+		"message": "$hr$ hour",
+		"placeholders": {
+			"hr": {
+				"content": "$1",
+				"example": "1"
+			}
+		}
+	},
+	"hours": {
+		"message": "$hrs$ hours",
+		"placeholders": {
+			"hrs": {
+				"content": "$1",
+				"example": "3"
+			}
+		}
+	},
 	"and": {"message": "and"},
 	"accept": {"message": "Accept"},
 	"confirm": {"message": "Confirm"},
