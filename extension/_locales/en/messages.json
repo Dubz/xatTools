@@ -59,9 +59,9 @@
 	"none": {"message": "None"},
 	"extras": {"message": "Extras"},
 	"minute": {
-		"message": "$min$ minute",
+		"message": "$mins$ minute",
 		"placeholders": {
-			"min": {
+			"mins": {
 				"content": "$1",
 				"example": "1"
 			}
@@ -77,9 +77,9 @@
 		}
 	},
 	"hour": {
-		"message": "$hr$ hour",
+		"message": "$hrs$ hour",
 		"placeholders": {
-			"hr": {
+			"hrs": {
 				"content": "$1",
 				"example": "1"
 			}
