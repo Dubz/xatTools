@@ -1,0 +1,730 @@
+/*
+ * Global/misc
+ * -Miscellaneous terms
+ * -Promotion timer
+ * -Footer
+ * --Links
+ * --Credits
+ *
+ *
+ * Background
+ * -Notifications
+ * --Install
+ * --Update
+ * --Promotion
+ * --Power release
+ * --Monitored by bot
+ * --Button text
+ *
+ *
+ * Embedding/injecting
+ * -Blacklisted
+ * --Reasons
+ * -Use bot
+ *
+ *
+ * Popup
+ * -Icons on top
+ * -Tables
+ * --Headers
+ * --Static data
+ * 
+ *
+ * Settings
+ * -General terms
+ * -Groups
+ * --Settings
+ * -Modals
+ * --Advanced mode
+ * --Reset settings
+ * --Backup/restore settings
+ * ---Restore settings
+ * -Buttons
+ * -Alerts
+ * --Settings decode failed
+ * -Notifications
+ * --Settings reset
+ * --Settings restored
+ * -Toasts (Mmmm toast)
+ * --Advanced mode toggle
+ * --Data copied
+ */
+{
+	/* 
+	 * Global messages
+	 */
+	"chat": {"message": "Chat"},
+	"all": {"message": "All"},
+	"local_only": {"message": "Local only"},
+	"none": {"message": "None"},
+	"extras": {"message": "Extras"},
+	"minute": {"message": "minute"},
+	"minutes": {"message": "minutes"},
+	"hour": {"message": "hour"},
+	"hours": {"message": "hours"},
+	"and": {"message": "and"},
+	"accept": {"message": "Accept"},
+	"confirm": {"message": "Confirm"},
+	"ok": {"message": "OK"},
+	"yes": {"message": "Yes"},
+	"cancel": {"message": "Cancel"},
+	"decline": {"message": "Decline"},
+	"no": {"message": "No"},
+	"copy": {"message": "Copy"},
+	"paste": {"message": "Paste"},
+	"id": {"message": "ID"},
+	"id_col": {"message": "ID:"},
+	"name": {"message": "Name"},
+	"name_col": {"message": "Name:"},
+	"is_group": {"message": "Is Group"},
+	"is_group_col": {"message": "Is Group:"},
+	"bot": {"message": "Bot"},
+	"bot_col": {"message": "Bot:"},
+	"promoted": {"message": "Promoted"},
+	"promoted_col": {"message": "Promoted:"},
+	"for_sale": {"message": "For sale"},
+	"for_sale_col": {"message": "For sale:"},
+	"backup": {"message": "Backup"},
+	"restore": {"message": "Restore"},
+
+
+	"refresh": {
+		"message": "Refresh",
+		"description": "Used on any refresh icon"
+	},
+	"refresh_list": {
+		"message": "Refresh List",
+		"description": "Used on any refresh icon for lists"
+	},
+	"ending": {
+		"message": "Ending",
+		"description": "Placeholder for a timer that has ended but not removed from the list"
+	},
+	"default": {
+		"message": "Default",
+		"description": "When nothing else is on the list, a default is shown"
+	},
+	"date_time": {
+		"message": "$date$ at $time$",
+		"description": "Simple way to combine a date and time.",
+		"placeholders": {
+			"date": {
+				"content": "$1",
+				"example": "10/30/2015"
+			},
+			"time": {
+				"content": "$2",
+				"example": "18:36:17"
+			}
+		}
+	},
+	"view_changelog": {
+		"message": "View changelog",
+		"description": "Displayed under update notifications"
+	},
+	"click_help": {
+		"message": "Click for help",
+		"description": "Title for icon users click for help"
+	},
+	"manage_settings": {
+		"message": "Manage settings",
+		"description": "Title for icon users click to edit settings"
+	},
+	"checking": {
+		"message": "Checking...",
+		"description": "Displayed on popup while information is being fetched from the backend"
+	},
+	//Promotion timer
+	"promoted_time": {
+		"message": "Promoted: $time$",
+		"description": "Promotion timer displayed under chats",
+		"placeholders": {
+			"time": {
+				"content": "$1",
+				"example": "1:30:00"
+			}
+		}
+	},
+	//Footer
+	//Footer - Links
+	"about": {"message": "About"},
+	"connect": {"message": "Connect"},
+	"blog": {"message": "Blog"},
+	"forum": {"message": "Forum"},
+	"forum_chat": {
+		"message": "$chat$ Forum",
+		"placeholders": {
+			"chat": {
+				"content": "$1",
+				"example": "Lobby"
+			}
+		}
+	},
+	"facebook": {"message": "Facebook"},
+	"facebook_page": {"message": "Facebook Page"},
+	"googleplus_page": {"message": "Google+ Page"},
+	"donate": {
+		"message": "Donate",
+		"description": "Section to donate to the project"
+	},
+	"version": {
+		"message": "Version: $version$",
+		"description": "Version number display",
+		"placeholders": {
+			"version": {
+				"content": "$1",
+				"example": "1.3.3.7"
+			}
+		}
+	},
+	//Footer - Credits
+	"credits_title": {
+		"message": "&copy; 2015-2016 xat Tools",
+		"description": "Extension title shown in footer on all pages"
+	},
+	"credits_author": {
+		"message": "Created by Dubz (320467393)",
+		"description": "Credits shown in footer on some pages"
+	},
+	/* 
+	 * Background messages
+	 */
+	//Notifications - Install
+	"notification_title_installation": {
+		"message": "Installation complete!",
+		"description": "Title displayed on notification of installation complete"
+	},
+	"notification_message_installation": {
+		"message": "xat Tools has been successfully installed.",
+		"description": "Message displayed on notification of installation complete"
+	},
+	//Notifications - Update
+	"notification_title_update": {
+		"message": "Update complete!",
+		"description": "Title displayed on notification of update complete"
+	},
+	"notification_message_update": {
+		"message": "xat Tools has been updated from v$old_version$ to v$new_version$.\nPlease refresh all xat tabs to avoid any issues.",
+		"description": "Message displayed on notification of installation complete",
+		"placeholders": {
+			"old_version": {
+				"content": "$1",
+				"example": "1.0.0"
+			},
+			"new_version": {
+				"content": "$2",
+				"example": "1.5.0"
+			}
+		}
+	},
+	//Notifications - Promotion
+	"notification_title_promotion_new": {
+		"message": "New promotion!",
+		"description": "Title of notification for new promotions."
+	},
+	"notification_title_promotion_extended": {
+		"message": "Promotion extended!",
+		"description": "Title of notification for extended promotions."
+	},
+	"notification_title_promotion_ended": {
+		"message": "Promotion ended",
+		"description": "Title of notification for ended promotions."
+	},
+	"notification_title_promotion_delisted": {
+		"message": "Promotion delisted!",
+		"description": "Title of notification for delisted promotions."
+	},
+	"notification_message_promotion_default": {
+		"message": "$chat_name$ is now promoted by default.",
+		"description": "Message for a chat that is promoted (on default promotion, no time limit)",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			}
+		}
+	},
+	"notification_message_promotion_for": {
+		"message": "$chat_name$ is now promoted for the next $time$.",
+		"description": "Message for a chat that is promoted (with a time limit)",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			},
+			"time": {
+				"content": "$2",
+				"example": "1 hour"
+			}
+		}
+	},
+	"notification_message_promotion_extended": {
+		"message": "$chat_name$ has extended their promotion for $time$.",
+		"description": "Message for a chat that extended their promotion",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			},
+			"time": {
+				"content": "$2",
+				"example": "1 hour"
+			}
+		}
+	},
+	"notification_message_promotion_ending": {
+		"message": "$chat_name$ is promoted.",
+		"description": "Message for a chat that is ending its promotion",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			}
+		}
+	},
+	"notifcation_message_promotion_ended": {
+		"message": "$chat_name$ is no longer promoted.",
+		"description": "Message displayed when a chat promotion ends",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			}
+		}
+	},
+	"notification_message_promotion_delisted": {
+		"message": "$chat_name$ has been delisted and is no longer promoted!",
+		"description": "Message displayed when a chat gets delisted from promotion for an unknown amount of time",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			}
+		}
+	},
+	"notification_message_promotion_delisted_time": {
+		"message": "$chat_name$ has been delisted for $delisted_time$ and is no longer promoted!",
+		"description": "Message displayed when a chat gets delisted from promotion for a certain time",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			},
+			"delisted_time": {
+				"content": "$2",
+				"example": "7 days"
+			}
+		}
+	},
+	"notification_message_promotion_delisted_permanent": {
+		"message": "$chat_name$ has been permanently delisted and is no longer promoted!",
+		"description": "Message displayed when a chat gets delisted from promotion permanently",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			}
+		}
+	},
+	"notification_message_promotion_delisted_false": {
+		"message": "Something broke, $chat_name$ was thought as delisted but isn't (yet?)!",
+		"description": "Message displayed when the extension thinks a chat was delisted but wasn't",
+		"placeholders": {
+			"chat_name": {
+				"content": "$1",
+				"example": "Lobby"
+			}
+		}
+	},
+	//Notifications - Power release
+	"notification_title_ad": {
+		"message": "New limited power sale!",
+		"description": "Title displayed on notifications for new power releases."
+	},
+	"notification_message_ad_in": {
+		"message": "$power$ will be on sale $time$.\nLimit per user: $limit$",
+		"description": "Message stating what power is on sale.",
+		"placeholders": {
+			"power": {
+				"content": "$1",
+				"example": "Topman"
+			},
+			"limit": {
+				"content": "$2",
+				"example": "1"
+			},
+			"time": {
+				"content": "$3",
+				"example": "in one hour"
+			}
+		}
+	},
+	"notification_message_ad_now": {
+		"message": "$power$ is now on sale!\nLimit per user: $limit$",
+		"description": "Message stating what power is on sale.",
+		"placeholders": {
+			"power": {
+				"content": "$1",
+				"example": "Topman"
+			},
+			"limit": {
+				"content": "$2",
+				"example": "1"
+			}
+		}
+	},
+	//Notifications - Monitored by bot
+	"monitored_by_bot": {
+		"message": "Monitored by $bot_name$ ($bot_id$)",
+		"description": "Show what bot is monitoring the room in the notifications.",
+		"placeholders": {
+			"bot_id": {
+				"content": "$1",
+				"example": "804"
+			},
+			"bot_name": {
+				"content": "$2",
+				"example": "Bot"
+			}
+		}
+	},
+	//Notifications - Botton text
+	"visit_chat": {
+		"message": "Visit this chat",
+		"description": "Simple link to the xat group"
+	},
+	"visit_store": {
+		"message": "Visit store",
+		"description": "Simple link to xat powers store"
+	},
+	"read_wiki": {
+		"message": "Read Wiki",
+		"description": "Simple link to Wiki page"
+	},
+	/*
+	 * Embedding/injecting messages
+	 */
+	//Blacklisted
+	"confirm_blacklisted": {
+		"message": "This chat is blacklisted!\nReasons:\n$reasons$\n\nYou will now be redirected to $redirect_chat$.",
+		"description": "Popup displayed when a user visits a chat that is blacklisted",
+		"placeholders": {
+			"reasons": {
+				"content": "$1",
+				"example": "Troll chat"
+			},
+			"redirect_chat": {
+				"content": "$2",
+				"example": "Tools"
+			}
+		}
+	},
+	//Blacklisted - Reasons
+	"blacklisted_reason_settings": {
+		"message": "User settings",
+		"description": "The extension user specified this chat in their settings to blacklist"
+	},
+	"blacklisted_reason_advertising": {
+		"message": "Advertising in other chats",
+		"description": "The chat was blacklisted for being advertised in other chats (with exception of official/tribute chats)"
+	},
+	"blacklisted_reason_incorrect_lang": {
+		"message": "Incorrect language on promotion",
+		"description": "The chat was blacklisted for promoting on a different language than used in the main chat"
+	},
+	"blacklisted_reason_troll": {
+		"message": "Troll chat",
+		"description": "The chat was blacklisted for promoting in an attempt to get delisted (banning everyone, being explicit, etc.)"
+	},
+	//Use bot
+	"use_bot": {
+		"message": "Use $bot_provider$",
+		"description": "Labels for buttons on edit chat page to quickly change bot providers",
+		"placeholders": {
+			"bot_provider": {
+				"content": "$1",
+				"example": "FEXBots"
+			}
+		}
+	},
+	"use_trusted_bot_provider": {
+		"message": "Use a trusted bot provider:",
+		"description": "Displayed on edit chat page for buttons to quickset setting"
+	},
+	/*
+	 * Popup messages
+	 */
+	//Icons on top
+	"login_xat": {
+		"message": "Login to xat",
+		"description": "Title for quick login button"
+	},
+	"click_subscribe": {
+		"message": "Click to subscribe",
+		"description": "Title for icon users click to subscribe to the chat"
+	},
+	"click_unsubscribe": {
+		"message": "Click to unsubscribe",
+		"description": "Title for icon users click to unsubscribe from the chat"
+	},
+	"click_block_bump_w": {
+		"message": "Click to move chat to bump block blacklist",
+		"description": "Title for icon users click to toggle bump blocking"
+	},
+	"click_block_bump_d": {
+		"message": "Click to add chat to bump block whitelist",
+		"description": "Title for icon users click to toggle bump blocking"
+	},
+	"click_block_bump_b": {
+		"message": "Click to remove chat from bump block blacklist",
+		"description": "Title for icon users click to toggle bump blocking"
+	},
+	"function_na": {
+		"message": "Function not available on this page",
+		"description": "Title for icons when not available on specific pages"
+	},
+	"click_notifications_off": {
+		"message": "Click to disable notifications",
+		"description": "Title for icon users click to disable notifications"
+	},
+	"click_notifications_on": {
+		"message": "Click to enable notifications",
+		"description": "Title for icon users click to enable notifications"
+	},
+	"inner_bg": {
+		"message": "Inner BG",
+		"description": "Shorter version for 'Inner Background'"
+	},
+	"outer_bg": {
+		"message": "Outer BG",
+		"description": "Shorter version for 'Outer Background'"
+	},
+	"css": {"message": "CSS"},
+	"html": {"message": "HTML"},
+	//Tables
+	//Tables - Headers
+	"chat_info": {
+		"message": "Chat Info",
+		"description": "Header displayed above chat information"
+	},
+	"promoted_chats": {
+		"message": "Promoted Chats",
+		"description": "Header displayed above promoted chats"
+	},
+	//Tables - Static data
+	"please_login_again": {
+		"message": "Please login again",
+		"description": "Tells the user to log in again"
+	},
+	"promote_now": {
+		"message": "Promote Now",
+		"description": "Link to promote the chat the user is currently viewing"
+	},
+	/*
+	 * Settings messages
+	 */
+	"title_settings": {
+		"message": "xat Tools - Settings",
+		"description": "Title for settings page"
+	},
+	"edit_settings": {
+		"message": "Edit Settings",
+		"description": "Header displayed on settings page"
+	},
+	//General terms
+	"always": {"message": "Always"},
+	"never": {"message": "Never"},
+	"allow": {"message": "Allow"},
+	"block": {"message": "Block"},
+	"blacklist": {"message": "Blacklist"},
+	"whitelist": {"message": "Whitelist"},
+	"blocklist": {"message": "Blocklist"},
+	"only_when_promo": {"message": "Only when promoted"},
+	"whitelist_only": {"message": "Whitelist only"},
+	"blacklist_only": {"message": "Blacklist only"},
+	//Groups
+	//Groups - Extension settings
+	"extension_settings": {"message": "Extension Settings"},
+	"settings_extension_badge": {"message": "Show number of promoted chats on extension icon"},
+	//Groups - xat settings
+	"xat_settings": {"message": "xat Settings"},
+	"settings_xat_block_redirectloop": {"message": "Block redirect loop (on xat.com)"},
+	"settings_xat_debug_all": {"message": "Debug all chats"},
+	"settings_xat_login_autoplay": {"message": "Auto-play chat on login page"},
+	"settings_xat_login_autoclose": {"message": "Auto-close quick login window on success (login on tabs will remain open)"},
+	"settings_xat_login_fix_group_powers": {"message": "Rename group power assignments list to actual group names (on login page)"},
+	"settings_xat_url_fix": {"message": "Fix chat URL (xat1 becomes Lobby)"},
+	"settings_xat_block_bump": {"message": "Block bump"},
+	"settings_xat_block_bump_when": {"message": "Default bump response"},
+	"settings_xat_block_bump_whitelist": {"message": "Bump Whitelist"},
+	"settings_xat_block_bump_whitelist_help": {"message": "(always bumps in these chats)"},
+	"settings_xat_block_bump_blacklist": {"message": "Bump Blacklist"},
+	"settings_xat_block_bump_blacklist_help": {"message": "(never bumps in these chats, even if whitelisted)"},
+	"settings_xat_block_lastapp": {"message": "Block apps auto open"},
+	"settings_xat_block_lastapp_help": {"message": "Enable this to stop apps from opening when you first visit a chat"},
+	"settings_xat_block_kisses": {"message": "Block kisses"},
+	"settings_xat_blocked_kisses": {"message": "Blocked kisses list"},
+	"settings_xat_promotimer_underchat": {"message": "Show promotion timer under chats"},
+	"settings_xat_popup_sortby_time_start": {"message": "Promotion start time"},
+	"settings_xat_popup_sortby_time_end": {"message": "Promotion end time"},
+	"settings_xat_popup_sortby_time_rend": {"message": "Promotion end time (reversed)"},
+	"settings_xat_popup_sortby_name": {"message": "Group name"},
+	"settings_xat_popup_sortby_id": {"message": "Group ID"},
+	"settings_xat_popup_sortby": {"message": "Sort promotion list in popup by"},
+	"settings_xat_blacklisted_chats": {"message": "Blacklisted chats"},
+	"settings_xat_blacklisted_chats_help": {"message": "(try to keep yourself from joining these rooms)"},
+	"settings_xat_blacklisted_redirect": {"message": "Redirect blacklisted chats to:"},
+	"settings_xat_blacklisted_redirect_help": {"message": "(if you enter a blacklisted chat you'll be redirected here instead)"},
+	//Groups - xat settings - Promotion notifications
+	"xat_settings_promotion_notifications": {"message": "Promotion Notifications"},
+	"settings_xat_notifications_promo": {"message": "Chat promotion notifications"},
+	"settings_xat_notifications_parse": {"message": "Show hours and minutes"},
+	"settings_xat_default_subscriptions": {"message": "Default chats subscriptions"},
+	"settings_xat_chat_subscriptions": {"message": "Chat subscriptions"},
+	"settings_xat_chat_subscriptions_help": {"message": "Get notified when any of these specified chats promote"},
+	"settings_xat_bot_subscriptions": {"message": "Bot service subscriptions"},
+	"settings_xat_bot_subscriptions_help1": {"message": "Get notified when a chat using one of these bots promotes"},
+	"settings_xat_bot_subscriptions_help2": {"message": "(enter bot username; only certain bots supported)"},
+	"settings_xat_bot_subscriptions_strict": {"message": "Bot service chat language:"},
+	"settings_xat_bot_subscriptions_strict_help": {"message": "(whether bot service subscriptions should notify for all languages or just your language set on xat.com)"},
+	"settings_xat_lang_subscriptions": {"message": "Language subscriptions"},
+	"settings_xat_lang_subscriptions_help": {"message": "Get notified when any chat in these languages promotes"},
+	"settings_xat_blocked_chats": {"message": "Blocked chats"},
+	"settings_xat_blocked_chats_help": {"message": "(will never notify you, no matter what)"},
+	//Groups - xat settings - Power release notifications
+	"xat_settings_power_release_notifications": {"message": "Power Release Notifications"},
+	"settings_xat_notifications_powerrelease": {"message": "Notify on new limited power release"},
+	"settings_xat_notify_powerrelease_interval": {"message": "Notification interval"},
+	"settings_xat_notify_powerrelease_interval_help": {"message": "When to be notified before release (in seconds, also accepts mathematical inputs). You can add as many as you would like"},
+	//Groups - xat settings - Design settings
+	"xat_settings_design_settings": {"message": "Design Settings"},
+	"settings_xat_blocked_design_custom_anime": {"message": "Block anime styling"},
+	"settings_xat_blocked_design_custom_cursor": {"message": "Block custom cursors"},
+	"settings_xat_blocked_design_custom_emo": {"message": "Block emo styling"},
+	"settings_xat_blocked_design_custom_radio": {"message": "Block radio based styling"},
+	"settings_xat_remove_ads": {"message": "Remove xat's ads"},
+	//Groups - Linkvalidator settings
+	"linkvalidator_settings": {"message": "Linkvalidator Settings"},
+	"linkvalidator_settings_help": {"message": "(requires advanced mode to be enabled)"},
+	"settings_linkvalidator_bypass_switch": {"message": "Bypass linkvalidator"},
+	"settings_linkvalidator_bypass_when": {"message": "Bypass linkvalidator.net"},
+	"settings_linkvalidator_whitelist_help": {"message": "(always redirects to these URLs)"},
+	"settings_linkvalidator_blacklist_help": {"message": "(never redirects to these URLs, even if whitelisted)"},
+	//Groups - Extras - Bot API
+	"bot_api": {"message": "Bot API"},
+	"bot_provider": {"message": "Bot Provider"},
+	"api_key": {"message": "API Key"},
+	"api_key_invalid": {"message": "Invalid API Key"},
+	//Groups - Extras - Custom CSS
+	"custom_css": {"message": "Custom CSS"},
+	"settings_extension_css_global": {"message": "Global CSS"},
+	"settings_extension_css_popup": {"message": "Popup CSS"},
+	"settings_extension_css_xat": {"message": "xat CSS"},
+	"settings_extension_css_xat_chat": {"message": "xat Chat CSS"},
+	//Modals
+	"modal_extension_advanced_mode_title": {
+		"message": "To help stop phishing, we are warning you:"
+	},
+	"modal_extension_advanced_mode_message1": {
+		"message": "DO NOT ENTER YOUR XAT PASSWORD OR YOUR EMAIL ADDRESS/PASSWORD on websites other than xat.com!",
+		"description": "Terms and conditions presented to user when they want to enable advanced mode and bypass safety guards."
+	},
+	"modal_extension_advanced_mode_message2": {
+		"message": "This extension comes with a list of domains permanently whitelisted. Any time you visit one of these domains, the link will be unblocked for you without having to add them to the whitelist. The only way to disable it is to disable linkvalidator bypassing completely.",
+		"description": "Terms and conditions presented to user when they want to enable advanced mode and bypass safety guards."
+	},
+	"modal_extension_advanced_mode_message3": {
+		"message": "THIS SOFTWARE AND SERVICE AND ANY THIRD PARTY SOFTWARE AND SERVICES ARE PROVIDED &quot;AS IS,&quot; WITH NO WARRANTIES WHATSOEVER. XAT TOOLS AND SUCH THIRD PARTIES EXPRESSLY DISCLAIM TO THE FULLEST EXTENT PERMITTED BY LAW ALL EXPRESS, IMPLIED, AND STATUTORY WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT OF PROPRIETARY RIGHTS AND ANY WARRANTIES REGARDING THE SECURITY, RELIABILITY, TIMELINESS, AND PERFORMANCE OF THE SOFTWARE OR SERVICE AND SUCH THIRD PARTY SOFTWARE OR SERVICES.",
+		"description": "Terms and conditions presented to user when they want to enable advanced mode and bypass safety guards."
+	},
+	"modal_extension_advanced_mode_message4": {
+		"message": "YOU UNDERSTAND AND AGREE THAT YOU DOWNLOAD AND/OR USE THE SOFTWARE AND SERVICE, AND ALL THIRD PARTY SOFTWARE OR SERVICES MADE AVAILABLE IN CONJUNCTION WITH OR THROUGH THE SOFTWARE OR SERVICE, AT YOUR OWN DISCRETION AND RISK THAT YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGES TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM THE DOWNLOAD OR USE OF THE SOFTWARE OR SERVICE AND SUCH THIRD PARTY SOFTWARE AND SERVICES.",
+		"description": "Terms and conditions presented to user when they want to enable advanced mode and bypass safety guards."
+	},
+	"modal_extension_advanced_mode_message5": {
+		"message": "SOME STATES OR OTHER JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU. YOU MAY ALSO HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE AND JURISDICTION TO JURISDICTION.",
+		"description": "Terms and conditions presented to user when they want to enable advanced mode and bypass safety guards."
+	},
+	"modal_extension_advanced_mode_message6": {
+		"message": "xat Tools and its developers are not liable for any phishing, malware, inappropriate sites, or other sites you may visit that are normally blocked by xat&apos;s linkvalidator system. USE AT YOUR OWN RISK!",
+		"description": "Terms and conditions presented to user when they want to enable advanced mode and bypass safety guards."
+	},
+	"modal_extension_advanced_mode_message7": {
+		"message": "By clicking Accept, you confirm that you have read the terms and conditions, that you understand them, and that you agree to be bound by them.",
+		"description": "Terms and conditions presented to user when they want to enable advanced mode and bypass safety guards."
+	},
+	"modal_extension_reset_settings_title": {
+		"message": "Are you sure you want to reset all of your settings?"
+	},
+	"modal_extension_reset_settings_message": {
+		"message": "This will set all of the settings back to the default."
+	},
+	"modal_extension_backup_restore_copy_help": {
+		"message": "Copy this data and save it in a safe place."
+	},
+	"modal_extension_backup_restore_paste_help": {
+		"message": "Paste data backed up previously here and click restore below."
+	},
+	"modal_extension_restore_data": {"message": "Restoring settings:"},
+	"modal_extension_restore_data_help": {"message": "All the information above will overwrite your current configuration."},
+	"modal_extension_restore_missing_keys": {"message": "Missing keys:"},
+	"modal_extension_restore_missing_keys_help": {"message": "Any missing keys will use the default value from the extension."},
+	"modal_extension_restore_unknown_keys": {"message": "Unknown keys:"},
+	"modal_extension_restore_unknown_keys_help": {"message": "Any unknown keys will be ignored."},
+	//Buttons
+	"advanced_mode": {
+		"message": "Advanced Mode",
+		"description": "Button on settings page to toggle advanced mode"
+	},
+	"reset_settings": {
+		"message": "Reset settings",
+		"description": "Button on settings page to reset settings"
+	},
+	"backup_restore": {
+		"message": "Backup & Restore",
+		"description": "Button on settings page to backup and restore settings"
+	},
+	"clear_cache": {
+		"message": "Clear Cache",
+		"description": "Button on settings page to clear cached data"
+	},
+	//Alerts
+	//Alerts - Settings decode failed
+	"alert_restore_decode_failed": {
+		"message": "Error decoding data, malformed content given.",
+		"description": "Alert that pops up when attempting to restore settings with bad data."
+	},
+	//Notifications
+	//Notifications - Settings reset
+	"notification_title_settings_reset": {
+		"message": "xat Tools",
+		"description": ""
+	},
+	"notification_message_settings_reset": {
+		"message": "Your settings have been reset to the defaults. Please refresh all tabs to avoid any issues.",
+		"description": ""
+	},
+	//Notifications - Settings restored
+	"notification_title_settings_restored": {
+		"message": "xat Tools",
+		"description": ""
+	},
+	"notification_message_settings_restored": {
+		"message": "Your settings have been restored from the backup. Please refresh all tabs to avoid any issues.",
+		"description": ""
+	},
+	//Toasts
+	//Toasts - Advanced mode toggle
+	"toast_advanced_mode_enabled": {
+		"message": "Advanced mode enabled!",
+		"description": "Notification message shown when advanced mode is enabled"
+	},
+	"toast_advanced_mode_disabled": {
+		"message": "Advanced mode disabled!",
+		"description": "Notification message shown when advanced mode is disabled"
+	},
+	//Toasts - Data copied
+	"toast_data_copied": {
+		"message": "Data copied!"
+	}
+}
