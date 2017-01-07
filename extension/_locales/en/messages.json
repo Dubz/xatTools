@@ -76,6 +76,15 @@
 			}
 		}
 	},
+	"hr": {
+		"message": "$amount$/hr",
+		"placeholders": {
+			"amount": {
+				"content": "$1",
+				"example": "100 xats/hr"
+			}
+		}
+	},
 	"hour": {
 		"message": "$hrs$ hour",
 		"placeholders": {
@@ -116,6 +125,15 @@
 	"promoted_col": {"message": "Promoted:"},
 	"for_sale": {"message": "For sale"},
 	"for_sale_col": {"message": "For sale:"},
+	"price": {
+		"message": "Price: $price$",
+		"placeholders": {
+			"price": {
+				"content": "$1",
+				"example": "Price: 100 xats"
+			}
+		}
+	},
 	"backup": {"message": "Backup"},
 	"restore": {"message": "Restore"},
 
@@ -211,7 +229,7 @@
 	},
 	//Footer - Credits
 	"credits_title": {
-		"message": "&copy; 2015-2016 xat Tools",
+		"message": "&copy; 2015-2017 xat Tools",
 		"description": "Extension title shown in footer on all pages"
 	},
 	"credits_author": {
